@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{6509D448-312C-44F1-B27B-EC0BECD7F8C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{6509D448-312C-44F1-B27B-EC0BECD7F8C2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemLib", "FileSystemLib\FileSystemLib.csproj", "{65594079-7A12-41F3-9DF8-B3235CD4F20B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileSystemLib", "FileSystemLib\FileSystemLib.csproj", "{65594079-7A12-41F3-9DF8-B3235CD4F20B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CB94C740-BBF0-485D-9E5A-1BC4818F908E}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\README.md = ..\..\README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
