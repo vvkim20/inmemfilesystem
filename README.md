@@ -3,6 +3,7 @@
 # Requirements
 Dotnet Core 5.0
 
+# How to Run the console app
 
 ```
 PS C:\inmemfilesystem\src\FileSystem\ConsoleApp> dotnet run
@@ -47,5 +48,5 @@ PS C:\inmemfilesystem\src\FileSystem\ConsoleApp> dotnet run
 ```
 
 
-#Todo
+# Todo
 Add unit tests
