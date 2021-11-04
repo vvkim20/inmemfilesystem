@@ -1,5 +1,3 @@
-# InMemoryFile
-
 # Requirements
 Dotnet Core 5.0
 
