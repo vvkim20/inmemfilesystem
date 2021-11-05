@@ -1,8 +1,18 @@
 # Requirements
 Dotnet Core 5.0
 
-# How to Run the console app
+# Prompts
+- make file FILE_NAME
+- write file FILENAME CONTENTS => FileName : FILENAME \r\n Content: CONTENTS
+- make directory DIRECTORY_NAME
+- move file FILE_NAME TARGET_DIRECTORY_NAME
+- change directory to DIRECTORY_NAME
+- change directory to parent
+- delete driectory DIRECTORY_NAME
+- get working directory contents
+- get working directory
 
+# Example
 ```
 PS C:\inmemfilesystem\src\FileSystem\ConsoleApp> dotnet run
 > make file homework_1
@@ -27,14 +37,8 @@ PS C:\inmemfilesystem\src\FileSystem\ConsoleApp> dotnet run
 /school
 > get working directory contents
 >> homework_1, math, history, spanish, school
-> change directory to homework
->> homework directory doesn't exist
 > get working directory contents
 >> homework_1, math, history, spanish, school
-> change directory math
->> Invalid command
-> change directory tp math
->> Invalid command
 > change directory to math
 > make file homework_1
 > change directory to parent
