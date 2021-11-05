@@ -52,4 +52,4 @@ PS C:\inmemfilesystem\src\FileSystem\ConsoleApp> dotnet run
 
 # Todo
 Add unit tests
-Missed Copy files
+Copy files
