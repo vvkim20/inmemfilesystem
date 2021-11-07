@@ -49,17 +49,18 @@ namespace FileSystemLib.Commands
                     newFileName += "_copy";
                 }
             }
-            targetFile.Name = newFileName;
-
+           
             if (parms.StartsWith(Command))
             {
+                // Override the new fileName
+                targetFile.Name = newFileName;
                 // Move file to the InMemoryDirectory
                 MoveToDirectory(targetFile, targetDirectoryObj);
             }
             else if (parms.StartsWith(CopyCommand))
             {
                 // Copy File to the targeDirectory
-                CopyToDirectory(targetFile, targetDirectoryObj);
+                CopyToDirectory(targetFile, targetDirectoryObj, newFileName);
             }
             else 
             {
@@ -81,12 +82,13 @@ namespace FileSystemLib.Commands
             targetDirectory.Children.Add(file);
         }
 
-        private void CopyToDirectory(IInMemoryFile file, InMemoryDirectory targetDirectory)
+        private void CopyToDirectory(IInMemoryFile file, InMemoryDirectory targetDirectory, string newFileName = null)
         {
+            var fileName = !string.IsNullOrWhiteSpace(newFileName) ? newFileName : file.Name;
             if (file.FileType == InMemoryFileType.Directory)
             {
                 // Create a new Directory
-                var newDirectory = new InMemoryDirectory(file.Name, targetDirectory);
+                var newDirectory = new InMemoryDirectory(fileName, targetDirectory);
                 InMemoryDirectory currentDirectory = (InMemoryDirectory)file;
                 foreach (var child in currentDirectory.Children)
                 {
@@ -97,7 +99,7 @@ namespace FileSystemLib.Commands
             else
             {
                 // Create a new file
-                var newFile = new InMemoryFile(file.Name, targetDirectory);
+                var newFile = new InMemoryFile(fileName, targetDirectory);
                 InMemoryFile currentFile = (InMemoryFile)file;
                 newFile.Contents = currentFile.Contents;
             }
