@@ -13,7 +13,7 @@ namespace FileSystemLib.Commands
         public FileCommands()
         {
             commanders.Add(new ChangeToParentCommand());
-            commanders.Add(new MoveCommand());
+            commanders.Add(new MoveAndCopyCommand());
             commanders.Add(new FindFileCommand());
             commanders.Add(new DeleteFileCommand());
             commanders.Add(new GetFileCommand());

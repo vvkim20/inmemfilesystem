@@ -27,5 +27,10 @@ namespace FileSystemLib
             Parent = targetDirectory;
             targetDirectory.Children.Add(this);
         }
+
+        public void CopyToDirectory(InMemoryDirectory targetDirectory)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

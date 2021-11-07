@@ -45,17 +45,6 @@ namespace FileSystemLib
         {
             Name = "/";
             Parent = null;
-        }
-
-        /// <summary>
-        /// Todo: move it to an abstract class
-        /// </summary>
-        /// <param name="targetDirectory"></param>
-        public void MoveToDirectory(InMemoryDirectory targetDirectory)
-        {
-            Parent.Children.Remove(this);
-            Parent = targetDirectory;
-            targetDirectory.Children.Add(this);
-        }
+        }      
     }
 }
