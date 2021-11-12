@@ -11,7 +11,16 @@ Dotnet Core 5.0
 - delete driectory DIRECTORY_NAME
 - get working directory contents
 - get working directory
-
+- support multi line command
+   ```
+    make file homework_1
+	write file homework_1 asdkfjlaksjdflkajsdflkjakdsflkjsadf
+	make directory math
+	make directory lunch
+	make directory history
+	make directory spanish
+	get working directory contents
+   ```
 # Example
 ```
 PS C:\inmemfilesystem\src\FileSystem\ConsoleApp> dotnet run
