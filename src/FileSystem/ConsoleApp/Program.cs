@@ -20,23 +20,32 @@ namespace ConsoleApp
                 Console.Write("> ");
                 var userInput = Console.ReadLine();
                 string outputMessage = "";
-                try
+                List<string> userInputs = new List<string>();
+                if (!string.IsNullOrWhiteSpace(userInput))
                 {
-                    current = commands.ExecuteCommand(userInput, current);
+                    userInputs = userInput.Split('\n').ToList();
                 }
-                catch (FileSystemException applicationException)
+
+                foreach (var userCommand in userInputs)
                 {
-                    outputMessage = applicationException.Message;
-                }
-                catch (Exception exception)
-                {
-                    // need a error message convert
-                    outputMessage = exception.Message;
-                }
-                finally
-                {
-                    if(!string.IsNullOrWhiteSpace(outputMessage))
-                        Console.WriteLine($">> {outputMessage}");
+                    try
+                    {
+                        current = commands.ExecuteCommand(userCommand, current);
+                    }
+                    catch (FileSystemException applicationException)
+                    {
+                        outputMessage = applicationException.Message;
+                    }
+                    catch (Exception exception)
+                    {
+                        // need a error message convert
+                        outputMessage = exception.Message;
+                    }
+                    finally
+                    {
+                        if (!string.IsNullOrWhiteSpace(outputMessage))
+                            Console.WriteLine($">> {outputMessage}");
+                    }
                 }
             }
         }

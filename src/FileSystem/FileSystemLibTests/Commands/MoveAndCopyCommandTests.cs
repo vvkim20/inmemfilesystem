@@ -25,7 +25,7 @@ namespace FileSystemLibTests.Commands
 
 
             // Act
-            // Copy aa to b
+            // Copy aa to ab
             var copycommand = new MoveAndCopyCommand();
             copycommand.Execute("copy file aa ab", aDirectory);
 
@@ -56,7 +56,7 @@ namespace FileSystemLibTests.Commands
 
 
             // Act
-            // Copy aa to b
+            // Copy aa to ab
             var copycommand = new MoveAndCopyCommand();
             copycommand.Execute("copy file aa ab", aDirectory);
 
